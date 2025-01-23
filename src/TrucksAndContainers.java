@@ -1,6 +1,8 @@
 public class TrucksAndContainers {
     private int yashchKont = 27;
     private int kontAuto = 12;
+    private int kolAvto = 0;
+    private int kolKon = 0;
     private int kolvoYashchikov;
 
     public TrucksAndContainers(int kolvoYashchikov) {
@@ -23,12 +25,25 @@ public class TrucksAndContainers {
         System.out.println("Количество ящиков - " + getKolvoYashchikov());
         System.out.println("Количество контейнеров - " + getKolvoKon());
         System.out.println("Количество автомобилей - " + getKolvoAuto());
+
         if (kolvoYashchikov == 0) {
             System.out.println("Где груз?");
         } else {
+            System.out.println("Грузовик " + ++kolAvto);
+            System.out.println("   Контейнер " + ++kolKon);
             for (int i = 1; i <= kolvoYashchikov; i++) {
-                System.out.println("Ящик - " + i);
+                System.out.println("      Ящик - " + i);
+                if (i % (27 * 12) == 0) {
+                    System.out.println("Грузовик " + ++kolAvto);
+                }
+                if (i % 27 == 0) {
+                    System.out.println("   Контейнер " + ++kolKon);
+                }
+
             }
+            System.out.println("Необходимо:");
+            System.out.println("Грузовиков:  " + kolAvto);
+            System.out.println("Контейнеров: " + kolKon);
         }
 
     }
