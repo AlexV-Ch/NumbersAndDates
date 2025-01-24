@@ -30,14 +30,14 @@ public class TrucksAndContainers {
             System.out.println("Где груз?");
         } else {
             System.out.println("Грузовик " + ++kolAvto);
-            System.out.println("   Контейнер " + ++kolKon);
+            System.out.println("\tКонтейнер " + ++kolKon);
             for (int i = 1; i <= kolvoYashchikov; i++) {
-                System.out.println("      Ящик - " + i);
+                System.out.println("\t\tЯщик - " + i);
                 if (i % (27 * 12) == 0) {
                     System.out.println("Грузовик " + ++kolAvto);
                 }
                 if (i % 27 == 0) {
-                    System.out.println("   Контейнер " + ++kolKon);
+                    System.out.println("\tКонтейнер " + ++kolKon);
                 }
 
             }
